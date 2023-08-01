@@ -9,7 +9,7 @@ public class Man extends Human {
         super(name,surname);
         this.sex = GenderType.male;
     }
-    
+
     public String toString(){
         return super.toString() +", мужчина";
     }
@@ -22,12 +22,12 @@ public class Man extends Human {
     public void setWife(int wife){
         this.wife = wife;
     }
-    
+
     //  @Override
     //     public void setMother(int mother) {
     //         this.mother = mother;
     //     }
-    
+
     //  @Override
     //     public void setFather(int father) {
     //         this.father = father;
