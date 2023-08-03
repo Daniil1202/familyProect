@@ -31,16 +31,16 @@ public class Female extends Human{
     public void setHusband(int husband) {
         this.husband = husband;
     }
-//      @Override
-//     public void setMother(int mother) {
-//        this.mother = mother;
+     @Override
+    public void setMother(int mother) {
+       this.mother = mother;
 
-//     }
+    }
 
-//     @Override
-//     public void setFather(int father) {
-//        this.father = father;
-//   }
+    @Override
+    public void setFather(int father) {
+       this.father = father;
+  }
 
     
 }

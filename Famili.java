@@ -6,8 +6,6 @@ public class Famili {
     public Famili() {
         
     }
-    
-
 @Override
 public String toString(){
     return "Семья :" + famili;

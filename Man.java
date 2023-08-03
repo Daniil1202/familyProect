@@ -14,7 +14,7 @@ public class Man extends Human {
         return super.toString() +", мужчина";
     }
     public void getMarrid(Human wife){
-        super.getMarrid(wife);
+        super.getMarried(wife);
     }
     public int getWife(){
         return wife;

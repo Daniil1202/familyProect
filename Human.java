@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 import java.time.Period;
 
-public abstract class Human {
+public class Human {
     private static int count;
     private int id = 0;
     private String name;
@@ -82,7 +82,7 @@ public abstract class Human {
         this.age = setAge(birthYear, birthMonth, birthDay);
     }
 
-    public void getMarrid(Human spouse){
+    public void getMarried(Human spouse){
         this.spouse = spouse.id;
     }
 
