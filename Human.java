@@ -1,7 +1,8 @@
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.Iterator;
 
-public class Human {
+public class Human implements Iterator<Human> {
     private static int count;
     private int id = 0;
     private String name;

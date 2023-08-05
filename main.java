@@ -4,8 +4,7 @@ import java.util.ArrayList;
 
 public class main {
     public static void main(String[] args) {
-
-         
+        
         Man pers1 = new Man("Сергей","Иванов",   1992, 23, 11);
         System.out.println(pers1);
         Human pers2 = new Female("Мария", "Иванова", 1992,2,1);

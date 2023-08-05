@@ -1,4 +1,4 @@
-public class Female extends Human{
+public class Female extends Human  {
     private int husband;
     private GenderType sex;
 

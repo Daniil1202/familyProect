@@ -5,6 +5,7 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 public class fileheandler implements LoadFrom, SaveAs {
+    @Override
     public Serializable load(String path){
         Serializable human = null;
         try(ObjectInputStream objectInputStream = new ObjectInputStream(
@@ -18,6 +19,7 @@ public class fileheandler implements LoadFrom, SaveAs {
         }
         return human;
     }
+    @Override
     public void save(String path, Serializable object){
         try {ObjectOutputStream objectOutputStream = new ObjectOutputStream(
             new FileOutputStream(path));
