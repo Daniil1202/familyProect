@@ -1,4 +1,4 @@
-public class Man extends Human {
+public  class Man extends Human  {
     private int wife;
     private GenderType sex;
     public Man(String name,String surname, int birthYear, int birthMonth, int birthDay){

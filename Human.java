@@ -1,8 +1,9 @@
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.Period;
-import java.util.Iterator;
 
-public class Human implements Iterator<Human> {
+
+public abstract class Human implements Serializable, Comparable<Human> {
     private static int count;
     private int id = 0;
     private String name;

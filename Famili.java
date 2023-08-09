@@ -1,7 +1,10 @@
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
-public class Famili {
-    private ArrayList<Human> famili = new ArrayList<>();
+public  class Famili<E extends Human> implements Iterator<E>, Serializable {
+    private ArrayList<E> famili = new ArrayList<>();
     
     public Famili() {
         
@@ -10,26 +13,35 @@ public class Famili {
 public String toString(){
     return "Семья :" + famili;
 }
-public void add(Human pers){
+public void add(E pers){
     famili.add(pers);
 }
-private Human findPerson(int id){
-    for(Human human : famili){
+private E findPerson(int id){
+    for(E human : famili){
         if(human.getId() == id)
         return human;
     }
+    
 throw new IllegalStateException("Такого человека в семье нет");
     }
 
-    public String findParents(Human pers) {
-        Human mother = findPerson(pers.getMother());
-        Human father = findPerson(pers.getFather());
+    public String findParents(E pers) {
+        E mother = findPerson(pers.getMother());
+        E father = findPerson(pers.getFather());
         return String.format("%s %s\nМать - %s\nОтец - %s", pers.getName(), mother.toString(), father.toString());
     }
 
-    public String findSpouse(Human pers) {
-        Human spouse = findPerson(pers.getSpouse());
+    public String findSpouse(E pers) {
+        E spouse = findPerson(pers.getSpouse());
         return String.format("%s %s\nв браке с: %s", pers.getName(), spouse.toString());
+    }
+    @Override
+    public Iterator<E> iterator(){
+        return new HumanIterator<>(famili);
+        return famili.iterator();
+    }
+    public void saveObj(fileheandler save){
+        save.save("Famili", this);
     }
 
 }
