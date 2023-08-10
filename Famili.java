@@ -4,9 +4,10 @@ import java.util.Iterator;
 import java.util.List;
 
 public  class Famili<E extends Human> implements Iterator<E>, Serializable {
-    private ArrayList<E> famili = new ArrayList<>();
+    private List<E> famili;
     
     public Famili() {
+        famili = new ArrayList<>();
         
     }
 @Override
@@ -30,18 +31,30 @@ throw new IllegalStateException("Такого человека в семье н�
         E father = findPerson(pers.getFather());
         return String.format("%s %s\nМать - %s\nОтец - %s", pers.getName(), mother.toString(), father.toString());
     }
-
+    public E getByName(String humanName) {
+        for (E human : famili) {
+            if (human.getName().equalsIgnoreCase(humanName)) {
+                return human;
+            }   
+        }
+            return null;
+            
+        }
+        public List<E> getFamili() {
+            return famili;
+        }
+        
     public String findSpouse(E pers) {
         E spouse = findPerson(pers.getSpouse());
         return String.format("%s %s\nв браке с: %s", pers.getName(), spouse.toString());
     }
     @Override
     public Iterator<E> iterator(){
-        return new HumanIterator<>(famili);
+        return new Iterator<>(famili);
         return famili.iterator();
     }
-    public void saveObj(fileheandler save){
-        save.save("Famili", this);
+    public void saveObject(Fileheandler save){
+        save.save("Famili.data", this);
     }
 
 }

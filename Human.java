@@ -144,4 +144,8 @@ public abstract class Human implements Serializable, Comparable<Human> {
         return "id: " + id + ", " + name  + ' ' + surname + ", " + age + " лет" + ", "
                 + getMatrimonialStatus();
     }
+    @Override
+    public int compareTo(Human o) {
+        return name.compareToIgnoreCase(o.name);
+    }
 }

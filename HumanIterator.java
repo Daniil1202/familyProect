@@ -17,4 +17,5 @@ public abstract class HumanIterator<E extends Human> implements Iterator<E> {
         return humans.get(index++);
     }
     
+    
 }

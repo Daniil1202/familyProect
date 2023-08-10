@@ -4,7 +4,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-public class fileheandler implements LoadFrom, SaveAs {
+public class Fileheandler implements LoadFrom, SaveAs {
     @Override
     public Serializable load(String path){
         Serializable human = null;
