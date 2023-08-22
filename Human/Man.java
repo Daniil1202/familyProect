@@ -1,3 +1,4 @@
+package Human;
 public  class Man extends Human  {
     private int wife;
     private GenderType sex;

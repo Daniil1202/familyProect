@@ -1,6 +1,10 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+import Human.Female;
+import Human.Human;
+import Human.Man;
+
 
 public class main {
     public static void main(String[] args) {

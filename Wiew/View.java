@@ -1,3 +1,6 @@
+import Preseneter.Presenter;
+
+package Wiew;
 public interface View {
     void setPresenter(Presenter presenter);
 

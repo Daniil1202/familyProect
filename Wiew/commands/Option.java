@@ -1,4 +1,4 @@
-package commands;
+package Wiew.commands;
 
 public interface Option {
     String description();

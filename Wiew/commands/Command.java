@@ -1,4 +1,4 @@
-package commands;
+package Wiew.commands;
 
 import java.io.Console;
 
@@ -11,4 +11,6 @@ public abstract class Command implements Option {
     public Console getConsole(){
         return console;
     }
+
+    
 }

@@ -1,4 +1,4 @@
-package commands;
+package Wiew.commands;
 
 import java.io.Console;
 
@@ -14,6 +14,6 @@ public class Load extends Command {
 
     @Override
     public void execute() {
-        getConsole().loadFamily();
+        super.getConsole().loadFamily();
     }
 }

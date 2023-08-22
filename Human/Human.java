@@ -1,3 +1,4 @@
+package Human;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.Period;
@@ -146,6 +147,6 @@ public abstract class Human implements Serializable, Comparable<Human> {
     }
     @Override
     public int compareTo(Human o) {
-        return name.compareToIgnoreCase(o.name);
+        return name.compareTo(o.name);
     }
 }

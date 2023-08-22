@@ -1,8 +1,12 @@
+package fileheandler;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+
+import Save.LoadFrom;
+import Save.SaveAs;
 
 public class Fileheandler implements LoadFrom, SaveAs {
     @Override

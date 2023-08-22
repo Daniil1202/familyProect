@@ -1,5 +1,8 @@
+package model;
 import java.util.Iterator;
 import java.util.List;
+
+import Human.Human;
 
 public abstract class HumanIterator<E extends Human> implements Iterator<E> {
     private int index;

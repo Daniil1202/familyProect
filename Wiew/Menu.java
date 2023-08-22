@@ -1,3 +1,4 @@
+package Wiew;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,10 +23,7 @@ public class Menu {
 
 
     }
-    void execute(int num){
-        Option option = commands.get(num - 1);
-        option.execute();
-    }
+    
     public String printMenu() {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("\n\t- =  Меню  = -\n\n");
@@ -36,6 +34,10 @@ public class Menu {
             stringBuilder.append("\n");
         }
         return stringBuilder.toString();
+    }
+    public void execute(int num){
+        Option option = commands.get(num - 1);
+        option.execute();
     }
 
     public Console getConsole() {

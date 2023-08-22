@@ -1,4 +1,9 @@
+package Wiew;
 import java.util.Scanner;
+
+import Preseneter.Presenter;
+import model.Service;
+
 
 public class Console implements View {
     
@@ -6,6 +11,7 @@ public class Console implements View {
     private Presenter presenter;
     private Menu menu;
     private boolean go;
+    private Service servis;
 
     @Override
     public void start(){
@@ -63,7 +69,7 @@ public class Console implements View {
     }
 
     public void sortFamilyAge() {
-        presenter.sortFamilyAge();
+        presenter.sortFamilyAge(); 
     }
 
     public void end() {

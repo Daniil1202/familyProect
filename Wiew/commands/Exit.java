@@ -1,4 +1,4 @@
-package commands;
+package Wiew.commands;
 
 import java.io.Console;
 
@@ -14,6 +14,6 @@ public class Exit extends Command {
 
     @Override
     public void execute() {
-        getConsole().end();
+        super.getConsole().end();
     }
 }
